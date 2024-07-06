@@ -42,7 +42,7 @@ public sealed class Produto : Entity
 
         DominioValidation.Quando(estoque < 0, "Estoque inválido.");
 
-        DominioValidation.Quando(imagem.Length > 250, "Imagem inválida. Imagem deve ter no máximo 250 caracteres");
+        DominioValidation.Quando((!string.IsNullOrEmpty(imagem) && imagem.Length > 250), "Imagem inválida. Imagem deve ter no máximo 250 caracteres");
 
         Nome = nome;
         Descricao = descricao;
