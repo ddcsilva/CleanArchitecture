@@ -6,7 +6,7 @@ public sealed class Categoria : Entity
 {
     public Categoria(int id, string nome)
     {
-        DominioValidation.Quando(id < 0, "Id inválido. Id é obrigatório");
+        DominioValidation.Quando(id < 0, "Id inválido.");
         ValidarDominio(nome);
     }
 
